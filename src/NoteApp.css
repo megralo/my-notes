@@ -1,0 +1,123 @@
+.note-app {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.note-input {
+  margin-bottom: 20px;
+}
+
+.note-input form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.title-input,
+.content-input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.add-button,
+.export-button,
+.import-button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  color: white;
+}
+
+.add-button {
+  background-color: #2196f3;
+}
+
+.add-button:hover {
+  background-color: #1976d2;
+}
+
+.import-export-buttons {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.export-button {
+  background-color: #4caf50;
+}
+
+.export-button:hover {
+  background-color: #388e3c;
+}
+
+.import-button {
+  background-color: #ff9800;
+  display: inline-block;
+  text-align: center;
+}
+
+.import-button:hover {
+  background-color: #f57c00;
+}
+
+.notes-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.note-card {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 15px;
+  background-color: #fff;
+}
+
+.note-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.note-title {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 0;
+}
+
+.delete-button {
+  background-color: #ff4444;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  font-size: 18px;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+.delete-button:hover {
+  background-color: #cc0000;
+}
+
+.note-date {
+  font-size: 0.8em;
+  color: #666;
+  margin: 0 0 10px 0;
+}
+
+.note-content {
+  margin: 0;
+  line-height: 1.4;
+}
