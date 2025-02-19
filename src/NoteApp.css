@@ -12,57 +12,86 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
+  align-items: flex-end;
 }
 
 .title-input,
-.content-input {
+.content-input,
+.edit-title-input,
+.edit-content-input {
   padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  border: none;
   font-size: 16px;
+  width: 100%;
 }
+
+.title-input:focus,
+.content-input:focus,
+.edit-title-input,
+.edit-content-input {
+  outline: none;
+}
+
+.title-input:focus::placeholder,
+.content-input:focus::placeholder {
+  opacity: 0;
+}
+
 
 .add-button,
 .export-button,
 .import-button {
   padding: 8px 16px;
   border: none;
-  border-radius: 4px;
   cursor: pointer;
   font-size: 16px;
-  color: white;
 }
 
 .add-button {
-  background-color: #2196f3;
+  width: 200px;
+  background-color: white;
 }
 
 .add-button:hover {
-  background-color: #1976d2;
+  width: 200px;
+  background-color: #e5e5e5;
+  color: black;
+  opacity: 0.8;
+}
+
+.note-counter {
+  padding: 8px 16px;
+  border-radius: 4px;
+  background-color: white;
+  font-size: 16px;
 }
 
 .import-export-buttons {
   display: flex;
-  gap: 10px;
-  margin-bottom: 20px;
+  justify-content: end;
+  gap: 25px;
+  margin-bottom: 50px;
 }
 
 .export-button {
-  background-color: #4caf50;
+  background-color: white
 }
 
 .export-button:hover {
-  background-color: #388e3c;
+  background-color: #e5e5e5;
+  color: black;
+  opacity: 0.8;
 }
 
 .import-button {
-  background-color: #ff9800;
   display: inline-block;
   text-align: center;
 }
 
 .import-button:hover {
-  background-color: #f57c00;
+  background-color: #e5e5e5;
+  color: black;
+  opacity: 0.8;
 }
 
 .notes-list {
@@ -72,10 +101,10 @@
 }
 
 .note-card {
-  border: 1px solid #ddd;
+  border: 1px solid #e5e5e5;
   border-radius: 4px;
   padding: 15px;
-  background-color: #fff;
+  background-color: white;
 }
 
 .note-header {
@@ -92,13 +121,14 @@
 }
 
 .delete-button {
-  background-color: #ff4444;
-  color: white;
+  background-color: white;
+  color: #ff4444;
   border: none;
   border-radius: 50%;
-  width: 24px;
-  height: 24px;
+  width: 25px;
+  height: 25px;
   font-size: 18px;
+  font-weight: bold;
   line-height: 1;
   cursor: pointer;
   display: flex;
@@ -108,16 +138,81 @@
 }
 
 .delete-button:hover {
-  background-color: #cc0000;
+  background-color: #e5e5e5;
 }
 
 .note-date {
+  display: flex;
+  justify-content: end;
   font-size: 0.8em;
   color: #666;
   margin: 0 0 10px 0;
 }
 
 .note-content {
+  display: flex;
   margin: 0;
   line-height: 1.4;
+}
+
+.note-buttons {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.edit-button {
+  background-color: white;
+  color: black;
+  border: none;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+.edit-button:hover {
+  background-color: #e5e5e5;
+}
+
+.edit-mode {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.edit-buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+
+.save-button,
+.cancel-button {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.save-button {
+  background-color: white;
+  color: green;
+}
+
+.cancel-button {
+  background-color: white;
+  color: #ff4444;
+}
+
+.save-button:hover,
+.cancel-button:hover {
+  background-color: #e5e5e5;
 }
